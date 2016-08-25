@@ -23,7 +23,7 @@ Logan Stucki 	  08/23/16
 +++++++++++++++++++++++++
  */
 
-public class AsciiBox2 {
+public class AsciiBox2Stucki {
 	public static void main(String[] args) {
 		System.out.println("Logan Stucki \t  08/23/16 \n\n" );
 		

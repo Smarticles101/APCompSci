@@ -31,7 +31,7 @@ HelpFul Hints
 \' draws one single quote on the screen!
  */
 
-public class AsciiArt {
+public class AsciiArtStucki {
 	public static void main ( String[] args ) {
 		System.out.println("Logan Stucki \t  08/23/16 \t 6\n\n");
 		System.out.println("Fish");
