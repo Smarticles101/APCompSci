@@ -1,3 +1,12 @@
+/**
+ * Variables lab
+ * Logan Stucki
+ * 6th period
+ * 6/9/16
+ * 
+ * I got help from my brain...
+ */
+
 package swingtest;
 
 import java.awt.BorderLayout;
@@ -12,7 +21,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class test extends JFrame {
+public class VariablesStuckiLogan extends JFrame {
 
 	private JPanel contentPane;
 	private JTextArea text;
