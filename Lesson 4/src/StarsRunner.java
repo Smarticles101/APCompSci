@@ -1,8 +1,26 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Logan Stucki
+//Date - 15/9/16
+//Class - 6th period
+// I got help from my brain
+
+/** Output
+ * StarsAndStripes
+ *
+ *
+ * --------------------
+ * ********************
+ * --------------------
+ *
+ *
+ * --------------------
+ * ********************
+ * --------------------
+ * --------------------
+ * ********************
+ * --------------------
+ *
+ */
 
 import static java.lang.System.*;
 

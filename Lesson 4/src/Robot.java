@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -8,17 +8,14 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Canvas;
 
-class Robot extends Canvas
-{
-   public Robot()    //constructor method - sets up the class
-   {
+class Robot extends Canvas {
+   public Robot() {   //constructor method - sets up the class
       setSize(800,600);
       setBackground(Color.WHITE);   	
       setVisible(true);
    }
 
-   public void paint( Graphics window )
-   {
+   public void paint( Graphics window ) {
       window.setColor(Color.BLUE);
 
       window.drawString("Robot LAB ", 35, 35 );
@@ -29,8 +26,7 @@ class Robot extends Canvas
       
    }
 
-   public void head( Graphics window )
-   {
+   public void head( Graphics window ) {
       window.setColor(Color.YELLOW);
 
       window.fillOval(300, 100, 200, 100);
@@ -40,14 +36,12 @@ class Robot extends Canvas
 				
    }
 
-   public void upperBody( Graphics window )
-   {
+   public void upperBody( Graphics window ) {
 
 		//add more code here
    }
 
-   public void lowerBody( Graphics window )
-   {
+   public void lowerBody( Graphics window ) {
 
 		//add more code here
 

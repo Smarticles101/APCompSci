@@ -1,27 +1,13 @@
-/**
- * Variables lab
- * Logan Stucki
- * 6th period
- * 6/9/16
- * 
- * I got help from my brain...
- */
-
-package swingtest;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class test extends JFrame {
+public class NewTest extends JFrame {
 
 	private JPanel contentPane;
 
@@ -32,7 +18,7 @@ public class test extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					test frame = new test();
+					NewTest frame = new NewTest();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,15 +30,24 @@ public class test extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public test() {
+	public NewTest() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
-
+		JScrollPane scrollPane = new JScrollPane();
+		contentPane.add(scrollPane, BorderLayout.CENTER);
+		
+		JTextArea txtrLllodgfjdaklfdjsajkvbsajklfdhjksla = new JTextArea();
+		txtrLllodgfjdaklfdjsajkvbsajklfdhjksla.setText("lllodgfjdaklf;djsajkvbsajklfdhjksla");
+		scrollPane.setViewportView(txtrLllodgfjdaklfdjsajkvbsajklfdhjksla);
+		
+		for(int x = 0; x<1000; x++) {
+			txtrLllodgfjdaklfdjsajkvbsajklfdhjksla.append("lol\n");
+		}
 	}
 
 }
