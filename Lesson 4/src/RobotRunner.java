@@ -5,12 +5,12 @@
 
 import javax.swing.JFrame;
 
-public class BigHouseRunner extends JFrame {
+public class RobotRunner extends JFrame {
 	private static final int WIDTH = 800;
 	private static final int HEIGHT = 600;
 
-	public BigHouseRunner() {
-		super("Big House");
+	public RobotRunner() {
+		super("Robot");
 
 		setSize(WIDTH,HEIGHT);
 
@@ -34,7 +34,7 @@ public class BigHouseRunner extends JFrame {
 
 		//getContentPane().add(new Animation());
 
-		getContentPane().add(new BigHouse());
+		getContentPane().add(new Robot());
 
 		setVisible(true);
 
@@ -42,6 +42,6 @@ public class BigHouseRunner extends JFrame {
 	}
 
 	public static void main( String args[] ) {
-		BigHouseRunner run = new BigHouseRunner();
+		RobotRunner run = new RobotRunner();
 	}
 }
