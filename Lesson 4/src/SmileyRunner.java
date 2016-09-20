@@ -3,6 +3,11 @@
 
 //graphics frame to run graphics examples
 
+//Name - Logan Stucki
+//Date - 9/20/16
+//Class - 6th
+//Lab  - Smiley face lab
+
 import javax.swing.JFrame;
 
 public class SmileyRunner extends JFrame {

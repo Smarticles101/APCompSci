@@ -1,8 +1,8 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Logan Stucki
+//Date - 9/20/16
+//Class - 6th
+//Lab  - Stars and stripes lab
 
 import static java.lang.System.*;
 

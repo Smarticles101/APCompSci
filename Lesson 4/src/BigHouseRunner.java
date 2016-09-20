@@ -3,6 +3,11 @@
 
 //graphics frame to run graphics examples
 
+//Name - Logan Stucki
+//Date - 9/20/16
+//Class - 6th
+//Lab  - House lab
+
 import javax.swing.JFrame;
 
 public class BigHouseRunner extends JFrame {
