@@ -20,7 +20,7 @@ public class ShapeRunner extends JFrame {
 
 		setSize(WIDTH,HEIGHT);
 
-		ShapePanel sp = new ShapePanel(2);
+		ShapePanel sp = new ShapePanel(50);
 
 		getContentPane().add(sp);
 		
