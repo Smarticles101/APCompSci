@@ -4,7 +4,7 @@
 //Class - 6th period
 //Lab  - Circle lab
 
-public class Circle {
+public class CircleStuckiLogan {
 	private double radius;
 	private double area;
 

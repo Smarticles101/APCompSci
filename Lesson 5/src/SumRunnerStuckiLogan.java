@@ -5,6 +5,12 @@
 //Lab  - Sum Lab
 // I got help from my brain, fingers, and eyeballs
 
+/**
+ * Several of these labs use the same methods
+ * we could, perhaps, implement an interface 
+ * with some abstract base methods in order to imporve them
+ */
+ 
 /*
  * Output:
 5.0 + 5.0 = 10.00
