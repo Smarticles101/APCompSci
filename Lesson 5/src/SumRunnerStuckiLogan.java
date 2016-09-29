@@ -8,7 +8,7 @@
 /**
  * Several of these labs use the same methods
  * we could, perhaps, implement an interface 
- * with some abstract base methods in order to imporve them
+ * with some abstract base methods
  */
  
 /*
