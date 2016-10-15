@@ -23,11 +23,20 @@ public class RandomFinder {
             BufferedReader fileIn = new BufferedReader(fileReader);
             
             String in = null;
+            int randomsFound = 0;
+            int currentLine = 1;
+            
             while((in = fileIn.readLine()) != null) {
-            	if(in.contains("Math.random()")) {
-            		
-            	}
+				if(in.contains("Math.random()")) {
+					String newIn = in.replaceAll("\t", "");
+					System.out.println("Math.random() found on line " + 
+					currentLine + " :\n" + newIn);
+					randomsFound++;
+				}
+				currentLine++;
             }
+            
+			System.out.println("Found Math.random() " + randomsFound + " times!");
 		} catch(FileNotFoundException e) {
 			System.out.println("File not found :: \n" + e.getStackTrace());
 		} catch(IOException e) {
