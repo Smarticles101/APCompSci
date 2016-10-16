@@ -1,9 +1,8 @@
-
-//� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 10/15/16
+//Class - 6th period
+//Lab  - Adding strings
 
 import static java.lang.System.*;
 
@@ -13,7 +12,6 @@ public class AddStringsStuckiLogan {
 	
 	public AddStringsStuckiLogan() {
 		this("", "");
-		Math.random();
 	}
 
 	public AddStringsStuckiLogan(String one, String two) {
@@ -26,11 +24,13 @@ public class AddStringsStuckiLogan {
 	}
 
 	public void add() {
-		
+		sum = first + " " + last;
 	}
 
 	public String toString() {
-		String output = "";
+		String output = "first :: " + first + "\n" +
+						"last :: " + last + "\n" +
+						"sum :: " + sum + "\n";
 		return output;
 	}
 }
