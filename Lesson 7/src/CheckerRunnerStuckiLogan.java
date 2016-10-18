@@ -6,10 +6,8 @@
 
 import static java.lang.System.*; 
 
-public class CheckerRunner
-{
-	public static void main ( String[] args )
-	{
+public class CheckerRunner {
+	public static void main ( String[] args ) {
 		StringChecker demo = new StringChecker("chicken");
 		out.println("looking for c "+demo.findLetter('c'));
 		out.println("looking for ch "+demo.findSubString("ch"));

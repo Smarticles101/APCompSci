@@ -1,16 +1,36 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 17/10/16
+//Class - 6th period
+//Lab  - String Ripper
+
+/* Output:
+cke
+chicken
+
+
+igato
+alligator
+
+
+SCI
+COMPUTER SCI
+TER SCIENCE IS 
+COMPUTER SCIENCE IS THE BEST!
+
+
+I like 
+fried ch
+icken and m
+nd m
+I like fried chicken and mashed potatoes!
+*/
 
 import static java.lang.System.*;
 
-public class RipperRunner
-{
-	public static void main ( String[] args )
-	{
-		StringRipper demo = new StringRipper("chicken");
+public class RipperRunnerStuckiLogan {
+	public static void main ( String[] args ) {
+		StringRipperStuckiLogan demo = new StringRipperStuckiLogan("chicken");
 		out.println(demo.ripString(3,6));
 		out.println(demo);
 		
