@@ -29,14 +29,14 @@ public class RandomFinder {
             while((in = fileIn.readLine()) != null) {
 				if(in.contains("Math.random()")) {
 					String newIn = in.replaceAll("\t", "");
-					System.out.println("Math.random() found on line " + 
+					System.out.println("\nMath.random() found on line " + 
 					currentLine + " :\n" + newIn);
 					randomsFound++;
 				}
 				currentLine++;
             }
             
-			System.out.println("Found Math.random() " + randomsFound + " times!");
+			System.out.println("\nFound Math.random() " + randomsFound + " times!");
 		} catch(FileNotFoundException e) {
 			System.out.println("File not found :: \n" + e.getStackTrace());
 		} catch(IOException e) {
@@ -44,3 +44,41 @@ public class RandomFinder {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6666666
