@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -6,9 +6,9 @@
 
 import static java.lang.System.*; 
 
-public class CheckerRunner {
+public class CheckerRunnerStuckiLogan {
 	public static void main ( String[] args ) {
-		StringChecker demo = new StringChecker("chicken");
+		StringCheckerStuckiLogan demo = new StringCheckerStuckiLogan("chicken");
 		out.println("looking for c "+demo.findLetter('c'));
 		out.println("looking for ch "+demo.findSubString("ch"));
 		out.println("looking for x "+demo.findSubString("x"));
