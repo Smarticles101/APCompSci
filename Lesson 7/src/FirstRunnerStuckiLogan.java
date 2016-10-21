@@ -48,4 +48,4 @@ public class FirstRunnerStuckiLogan {
 		//add more test cases	
 		
 	}
-}
+} 

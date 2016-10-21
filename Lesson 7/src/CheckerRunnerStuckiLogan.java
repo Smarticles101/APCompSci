@@ -1,8 +1,27 @@
-//� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 21/10/16
+//Class - 6th period
+//Lab  - String checker
+
+/* Output:
+looking for c true
+looking for ch true
+looking for x false
+chicken
+
+
+looking for g true
+looking for all true
+looking for gater false
+alligator
+
+
+looking for U true
+looking for COMP SCI false
+looking for SCIENCE true
+COMPUTER SCIENCE IS THE BEST!
+ */
 
 import static java.lang.System.*; 
 

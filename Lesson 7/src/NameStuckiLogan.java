@@ -23,7 +23,7 @@ public class NameStuckiLogan {
 
 	public String getFirst() {
 		return name.substring(0,name.indexOf(' ')); // we could also use String.split(' '), write it to an array, and return the 0 index
-	}
+	}												// yes, i do have too much time on my hands ¯\_(ツ)_/¯
 
 	public String getLast() {
 		return name.substring(name.indexOf(' ') + 1);
