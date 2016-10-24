@@ -2,7 +2,7 @@
 
 rm $0
 
-java "DiscountRunnerStuckiLogan"
+java "StringOddOrEvenStuckiLogan"
 
 echo "
 
