@@ -1,8 +1,8 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name - 
-//Date -
-//Class -
-//Lab  -
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 25/10/16
+//Class - 6th period
+//Lab  - Animated car
 
 import java.awt.Graphics;
 import java.awt.Color;
@@ -12,15 +12,13 @@ import javax.swing.Timer;
 import javax.swing.JFrame;
 import java.awt.Canvas;
 
-class AnimatedCar extends Canvas
-{
+class AnimatedCarStuckiLogan extends Canvas {
 	private int x;
 	private int y;
 	private Timer timer;
-	private final static int SLEEP = 50;  //bigger # = slower animation	
+	private final static int SLEEP = 5;  //bigger # = slower animation	
 	
-	public AnimatedCar(int width, int heigth)
-	{
+	public AnimatedCarStuckiLogan(int width, int heigth) {
 		setSize(width, heigth);
 		setVisible(true);
 		setBackground(Color.BLACK);
@@ -28,9 +26,8 @@ class AnimatedCar extends Canvas
 		x = 0;
 		y = 50;
 
-		ActionListener paintCaller = new ActionListener(){
-			public void actionPerformed(ActionEvent event)
-			{
+		ActionListener paintCaller = new ActionListener() {	// shout if you love ActionListeners
+			public void actionPerformed(ActionEvent event) {
 				repaint();  //each time timer fires it will call paint
 			}
 		};
@@ -38,13 +35,11 @@ class AnimatedCar extends Canvas
 		timer.start();
 	}	
 	
-	public void update(Graphics window)
-	{
+	public void update(Graphics window) {
 	   paint(window);	
 	}
 	
-	public void paint( Graphics window )
-	{
+	public void paint( Graphics window ) {
 		window.setColor(Color.BLACK);
 		window.fillRect(0,0,getWidth(),getHeight());
 		
@@ -56,17 +51,20 @@ class AnimatedCar extends Canvas
 
 		
 		//draw a wheel
-		
+		window.setColor(Color.BLUE);
+		window.fillOval(x+2, y+20+35, 10, 10);
 		
 		//draw another wheel
-		
+		window.fillOval(x+70, y+20+35, 10, 10);
 		
 		//increment x by 50
-
+		x++;
 		
 		//if x has reached the far right side of the screen
 		//set it back to zero
-		
+		if(x>super.getWidth()) {
+			x=0;
+		}
 		
 	}	
 }
