@@ -27,7 +27,11 @@ public class SocialStuckiLogan {
 	public void chopAndAdd() {
 		int firstDash = socialNum.indexOf('-');
 		String sub = socialNum.substring(0, firstDash);
-		
+		sum+=Integer.parseInt(sub);
+		sub=socialNum.substring(firstDash+1, socialNum.indexOf('-', firstDash+1));
+		sum+=Integer.parseInt(sub);
+		sub=socialNum.substring(socialNum.lastIndexOf('-')+1);
+		sum+=Integer.parseInt(sub);
 	}
 
 	public String toString() {
