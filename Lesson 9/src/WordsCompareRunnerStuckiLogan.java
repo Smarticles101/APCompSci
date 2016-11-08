@@ -4,6 +4,24 @@
 //Class - 6th period
 //Lab  - String Compare
 
+/*Output:
+abe should be placed after ape
+
+giraffe should be placed after gorilla
+
+one should be placed after two
+
+fun should be placed after funny
+
+123 should be placed after 19
+
+193 should be placed after 1910
+
+goofy should be placed after godfather
+
+funnel should be placed after fun
+ */
+
 import static java.lang.System.*;
 
 public class WordsCompareRunnerStuckiLogan {

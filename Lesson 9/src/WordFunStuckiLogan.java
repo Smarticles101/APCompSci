@@ -4,62 +4,16 @@
 //Class - 6th period
 //Lab  - Word fun
 
-/* Output:
-Hello World
-
-
-HELLO WORLD
-
-
-HELLO-WORLD
-
-
-Jim Bob
-
-
-JIM BOB
-
-
-JIM-BOB
-
-
-Computer Science
-
-
-COMPUTER SCIENCE
-
-
-COMPUTER-SCIENCE
-
-
-UIL TCEA
-
-
-UIL TCEA
-
-
-UIL-TCEA
-
-
-State Champions
-
-
-STATE CHAMPIONS
-
-
-STATE-CHAMPIONS
-*/
-
 import static java.lang.System.*;
 
-public class WordFun {
+public class WordFunStuckiLogan {
 	private String word;
 
-	public WordFun() {
+	public WordFunStuckiLogan() {
 		this("");
 	}
 
-	public WordFun(String w) {
+	public WordFunStuckiLogan(String w) {
 		setWord(w);
 	}
 

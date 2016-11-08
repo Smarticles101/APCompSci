@@ -24,10 +24,10 @@
 
 import static java.lang.System.*;
 
-public class StringLengthRunner {
+public class StringLengthRunnerStuckiLogan {
 	public static void main( String args[] ) {
 		//add test cases
-		StringLengthCheck demo = new StringLengthCheck("hello","goodbye");
+		StringLengthCheckStuckiLogan demo = new StringLengthCheckStuckiLogan("hello","goodbye");
 		System.out.println(demo);
 		
 		demo.setWords("one","two");

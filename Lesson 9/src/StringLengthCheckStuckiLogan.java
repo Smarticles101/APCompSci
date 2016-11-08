@@ -6,14 +6,14 @@
 
 import static java.lang.System.*;
 
-public class StringLengthCheck {
+public class StringLengthCheckStuckiLogan {
 	String wordOne, wordTwo;
 
-	public StringLengthCheck() {
+	public StringLengthCheckStuckiLogan() {
 		this("","");
 	}
 
-	public StringLengthCheck(String one, String two) {
+	public StringLengthCheckStuckiLogan(String one, String two) {
 		setWords(one, two);
 	}
 

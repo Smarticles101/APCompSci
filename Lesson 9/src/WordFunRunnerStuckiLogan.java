@@ -4,11 +4,57 @@
 //Class - 6th period
 //Lab  - Word fun
 
+/* Output:
+Hello World
+
+
+HELLO WORLD
+
+
+HELLO-WORLD
+
+
+Jim Bob
+
+
+JIM BOB
+
+
+JIM-BOB
+
+
+Computer Science
+
+
+COMPUTER SCIENCE
+
+
+COMPUTER-SCIENCE
+
+
+UIL TCEA
+
+
+UIL TCEA
+
+
+UIL-TCEA
+
+
+State Champions
+
+
+STATE CHAMPIONS
+
+
+STATE-CHAMPIONS
+*/
+
 import static java.lang.System.*;
 
-public class WordFunRunner {
+public class WordFunRunnerStuckiLogan {
 	public static void main( String args[] ) {
-	   WordFun test = new WordFun("Hello World");
+	   WordFunStuckiLogan test = new WordFunStuckiLogan("Hello World");
 	   out.println(test);
 	   test.makeUpper();
 	   out.println(test);
