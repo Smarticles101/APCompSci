@@ -1,3 +1,8 @@
+// Logan Stucki
+// 10/11/16
+// 6th period
+// magpie 3
+
 import java.util.Scanner;
 
 /**
@@ -6,7 +11,7 @@ import java.util.Scanner;
  * @version April 2012
  */
  
-public class MagpieRunner3
+public class MagpieRunner3StuckiLogan
 {
 
 	/**
@@ -14,7 +19,7 @@ public class MagpieRunner3
 	 */
 	public static void main(String[] args)
 	{
-		Magpie3 maggie = new Magpie3();
+		Magpie3StuckiLogan maggie = new Magpie3StuckiLogan();
 		
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);
