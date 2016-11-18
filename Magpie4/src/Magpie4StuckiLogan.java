@@ -1,19 +1,21 @@
 // Logan Stucki
 // 10/11/16
 // 6th period
-// magpie 3
+// magpie 4
 
 /**
  * A program to carry on conversations with a human user. This version:
  * <ul>
  * <li>Uses advanced search for keywords</li>
+ * <li>Will transform statements as well as react to keywords</li>
  * </ul>
  * 
  * @author Laurie White
  * @version April 2012
+ *
  */
 
-public class Magpie3StuckiLogan {
+public class Magpie4StuckiLogan {
 	/**
 	 * Get a default greeting
 	 * 
@@ -34,21 +36,83 @@ public class Magpie3StuckiLogan {
 		String response = "";
 		if (statement.length() == 0) {
 			response = "Say something, please.";
-		} else if (findKeyword(statement, "no") >= 0) {
+		}
+
+		else if (findKeyword(statement, "no") >= 0) {
 			response = "Why so negative?";
 		} else if (findKeyword(statement, "mother") >= 0 || findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0 || findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else if(findKeyword(statement, "Cocanower") >= 0) {
+		}
+
+		// Responses which require transformations
+		else if (findKeyword(statement, "I want to", 0) >= 0) {
+			response = transformIWantToStatement(statement);
+		} else if(findKeyword(statement, "I") >=0 && findKeyword(statement, "you")>=0) {
+			response = "Why do you" + statement.substring(1,findKeyword(statement, "you")) + "me?";
+		}
+
+		else if(findKeyword(statement, "Cocanower") >= 0) {
 			response = "She sounds like a good teacher.";
 		} else if(findKeyword(statement, "recursion") >= 0) {
 			response = getResponse(statement);
 		} else if(findKeyword(statement, "math.random") >= 0) {
 			response = Math.random()+"";
 		} else {
-			response = getRandomResponse();
+			// Look for a two word (you <something> me)
+			// pattern
+			int psn = findKeyword(statement, "you", 0);
+
+			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0) {
+				response = transformYouMeStatement(statement);
+			} else {
+				response = getRandomResponse();
+			}
 		}
 		return response;
+	}
+
+	/**
+	 * Take a statement with "I want to <something>." and transform it into
+	 * "What would it mean to <something>?"
+	 * 
+	 * @param statement
+	 *            the user statement, assumed to contain "I want to"
+	 * @return the transformed statement
+	 */
+	private String transformIWantToStatement(String statement) {
+		// Remove the final period, if there is one
+		statement = statement.trim();
+		String lastChar = statement.substring(statement.length() - 1);
+		if (lastChar.equals(".")) {
+			statement = statement.substring(0, statement.length() - 1);
+		}
+		int psn = findKeyword(statement, "I want to", 0);
+		String restOfStatement = statement.substring(psn + 9).trim();
+		return "What would it mean to " + restOfStatement + "?";
+	}
+
+	/**
+	 * Take a statement with "you <something> me" and transform it into "What
+	 * makes you think that I <something> you?"
+	 * 
+	 * @param statement
+	 *            the user statement, assumed to contain "you" followed by "me"
+	 * @return the transformed statement
+	 */
+	private String transformYouMeStatement(String statement) {
+		// Remove the final period, if there is one
+		statement = statement.trim();
+		String lastChar = statement.substring(statement.length() - 1);
+		if (lastChar.equals(".")) {
+			statement = statement.substring(0, statement.length() - 1);
+		}
+
+		int psnOfYou = findKeyword(statement, "you", 0);
+		int psnOfMe = findKeyword(statement, "me", psnOfYou + 3);
+
+		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
+		return "What makes you think that I " + restOfStatement + " you?";
 	}
 
 	/**
@@ -67,15 +131,12 @@ public class Magpie3StuckiLogan {
 	 */
 	private int findKeyword(String statement, String goal, int startPos) {
 		String phrase = statement.trim();
-		// The only change to incorporate the startPos is in
-		// the line below
+		// The only change to incorporate the startPos is in the line below
 		int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
 
-		// Refinement--make sure the goal isn't part of a
-		// word
+		// Refinement--make sure the goal isn't part of a word
 		while (psn >= 0) {
-			// Find the string of length 1 before and after
-			// the word
+			// Find the string of length 1 before and after the word
 			String before = " ", after = " ";
 			if (psn > 0) {
 				before = phrase.substring(psn - 1, psn).toLowerCase();
@@ -84,8 +145,7 @@ public class Magpie3StuckiLogan {
 				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1).toLowerCase();
 			}
 
-			// If before and after aren't letters, we've
-			// found the word
+			// If before and after aren't letters, we've found the word
 			if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) // before
 																				// is
 																				// not
@@ -95,8 +155,8 @@ public class Magpie3StuckiLogan {
 				return psn;
 			}
 
-			// The last position didn't work, so let's find
-			// the next, if there is one.
+			// The last position didn't work, so let's find the next, if there
+			// is one.
 			psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
 
 		}
@@ -145,7 +205,4 @@ public class Magpie3StuckiLogan {
 		return response;
 	}
 
-	public static void main(String args[]) {
-		new Magpie3StuckiLogan().findKeyword("Yesterday is today's day before.", "day", 0);
-	}
 }

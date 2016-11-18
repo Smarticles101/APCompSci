@@ -87,4 +87,11 @@ public class Magpie2StuckiLogan {
 
 		return response;
 	}
+	
+	public static void main(String args[]) {
+		System.out.println(new Magpie2StuckiLogan().getResponse("My brother is my mother's son."));
+		System.out.println(new Magpie2StuckiLogan().getResponse("I said no!"));
+		System.out.println(new Magpie2StuckiLogan().getResponse("What are you doing today?"));
+		System.out.println(new Magpie2StuckiLogan().getResponse("Nothing that my sister does is ever noticed"));
+	}
 }

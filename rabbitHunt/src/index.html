@@ -1,0 +1,177 @@
+<h1>Rabbit Hunt</h1>
+
+<p><b>Supporting files:</b>
+<blockquote>
+<a href=Controller.java><tt>Controller.java</tt></a><br>
+<a href=Direction.java><tt>Direction.java</tt></a><br>
+<a href=Entity.java><tt>Entity.java</tt></a><br>
+<a href=Fox.java><tt>Fox.java</tt></a><br>
+<a href=Game.java><tt>Game.java</tt></a><br>
+<a href=Grader.java><tt>Grader.java</tt></a><br>
+<a href=MessageView.java><tt>MessageView.java</tt></a><br>
+<a href=Model.java><tt>Model.java</tt></a><br>
+<a href=Player.java><tt>Player.java</tt></a><br>
+<a href=Rabbit.java><tt>Rabbit.java</tt></a><br>
+<a href=RabbitHunt.java><tt>RabbitHunt.java</tt></a><br>
+<a href=View.java><tt>View.java</tt></a>
+</blockquote></p>
+
+<p><b>Administrative note:</b> The original designer of this
+assignment, David Matuszek of the University of Pennsylvania, assigned
+grades as the percentage of times that their Rabbit program succeeds.
+I have not tried the assignment in the classroom, so I can't vouch for
+it myself. Additionally, I have rewritten his code; I don't
+think the changes make success substantially more difficult, but it's
+possible.</p>
+
+<p><b>Objectives:</b><ul>
+
+<li>To improve understanding of classes, objects, and inheritance</p>
+
+<li>To give more practice in reading code as well as writing code</p>
+
+<li>To demonstrate non-algorithmic programming</p>
+
+</ul></p>
+
+<p>A fox is hunting a rabbit in a field. The field contains a number of
+bushes which obstruct both the fox's view and the rabbit's view, so
+each may or may not be able to see the other.  If the fox catches the
+rabbit, the fox eats it and wins. If the rabbit can keep away from the
+fox for 100 turns, the rabbit wins. </p>
+
+<p>You are the rabbit.</p>
+
+<p>When you compile the distributed files and run the RabbitHunt class,
+you will see a diagram of the field.
+<center><img src=hunt-small.png></center>
+The big red dot represents the fox, the small brown dot is the
+rabbit, and the green blobs are bushes.</p>
+
+<p>Run the program a few times and see what happens. Notice that you
+can step through the hunt, or you can just let it run. You can adjust
+the speed at which the animation proceeds. (This does not affect what
+happens, only how quickly it happens.)  The rabbit almost
+always meets an untimely end. However, occasionally the rabbit will
+evade the fox for 100 turns, and the rabbit wins - this doesn't happen
+very often.</p>
+
+<p>Now look at the Rabbit class. It has a constructor method, and it
+has a <code>decide</code> method for determining how the rabbit moves
+each turn. The rabbit I've given you is a really
+stupid rabbit - it just moves randomly.</p>
+
+<p>Your job is to improve the Rabbit class so that the rabbit escapes
+more often. You can edit this file in any way you wish; however,
+you cannot edit the other files, although you are welcome - and
+encouraged - to look at them.</p>
+
+<p>Your program should not assume that the grid is always 22x22,
+even though the RabbitHunt program happens to use a 22x22 grid.
+Your class can access the grid's size via the Game class described
+below. You can easily test other grid sizes yourself by editing
+the first line of RabbitHunt's <code>main</code> method.</p>
+
+<p>It is probably impossible to find a strategy for the rabbit that
+ensures a 100% survival rate.</p>
+
+<h2>Useful classes</h2>
+
+<p>There are several classes in the program; besides the Rabbit
+class, you will be able to make use of four others. This section
+briefly describes these classes and what you might find useful in each.
+You can get additional information by reading the classes
+themselves.</p>
+
+<p>Although your code will not be able to use it directly, the Fox
+class is a useful example of a sophisticated animal using all of these
+classes together to compute its own decision in each turn.</p>
+
+<h3>Direction class</h3>
+
+<p>Direction objects represent one of the eight objects that an
+animal can move each turn. Because the constructor is private,
+you cannot create Direction objects; you can, however, access
+them through the constants provided in the class,
+<code>NORTH</code>, <code>NORTHEAST</code>, <code>EAST</code>,
+<code>SOUTHEAST</code>, <code>SOUTH</code>, etc.</p>
+
+<p><table>
+<tr><td valign=top><code>static int NUM_DIRECTIONS</code></td>
+	<td>The number of directions (8).</td></tr>
+<tr><td valign=top><code>int getDeltaX()</code></td>
+	<td>Returns the change in columns with each step in this direction.</td></tr>
+<tr><td valign=top><code>int getDeltaY()</code></td>
+	<td>Returns the change in rows with each step in this direction.
+	(Note that northward movement increases the row index.)</td></tr>
+<tr><td valign=top><code>Direction rotate(int steps)</code></td>
+	<td>Returns the direction clockwise from this direction by
+	<code>steps</code> 45-degree steps.</td></tr>
+</table></p>
+
+<h3>Entity class</h3>
+
+<p>Represents something in the field - a bush, a rabbit, or a
+fox. Your class will see Entity objects in two ways: It receives the
+rabbit entity via its constructor, and Player's
+<code>look</code> method will return other entities.</p>
+
+<p><table>
+<tr><td valign=top><code>boolean isBush()</code></td>
+	<td>Returns <code>true</code> if this entity is a bush.</td></tr>
+<tr><td valign=top><code>boolean isRabbit()</code></td>
+	<td>Returns <code>true</code> if this entity is a rabbit.</td></tr>
+<tr><td valign=top><code>boolean isFox()</code></td>
+	<td>Returns <code>true</code> if this entity is a fox.</td></tr>
+<tr><td valign=top><code>int getRow()</code></td>
+	<td>Returns the row that this entity currently occupies.</td></tr>
+<tr><td valign=top><code>int getColumn()</code></td>
+	<td>Returns the column that this entity currently
+	occupies.</td></tr>
+<tr><td valign=top><code>int distanceTo(Entity other)</code></td>
+	<td>Returns the minimum number of steps to get from this entity to
+	another.</td></tr>
+</table></p>
+
+<h3>Player class</h3>
+
+<p>Your Rabbit class extends the Player class. Notice that there
+is both a Rabbit player and a rabbit entity; you can think of
+the player as the rabbit's mind, and the entity as the rabbit's
+body.  The Rabbit class inherits some useful methods from the
+Player class.</p>
+
+<p><table>
+<tr><td valign=top><code>Entity look(Direction where)</code></td>
+	<td>Returns the first entity visible in the given
+	direction.</td></tr>
+<tr><td valign=top><code>boolean canMove(Direction where)</code></td>
+	<td>Returns <code>true</code> if the move is legal - that
+	is, if there isn't a bush blocking the way.</td></tr>
+<tr><td valign=top><code>int getStepCount()</code></td>
+	<td>Returns the number of steps completed so far.</td></tr>
+</table></p>
+
+<h3>Game class</h3>
+
+<p>The Game class provides data related to the overall game.
+Your class will receive the Game object via the constructor
+method.</td>
+
+<p><table>
+<tr><td valign=top><code>static int MAX_RABBIT_STEPS</code></td>
+	<td>The number of steps the rabbit needs to survive.</td></tr>
+<tr><td valign=top><code>int getRowCount()</code></td>
+	<td>Returns the number of rows in the grid.</td></tr>
+<tr><td valign=top><code>int getColumnCount()</code></td>
+	<td>Returns the number of columns in the grid.</td></tr>
+<tr><td valign=top><code>int randomInt(int min, int max)</code></td>
+	<td>Returns a random integer from the range given,
+	inclusive.</td></tr>
+<tr><td valign=top><code>Direction randomDirection()</code></td>
+	<td>Returns a randomly chosen direction.</td></tr>
+</table>
+Whenever your class wants to do something random, it should use
+<code>randomInt</code> or <code>randomDirection</code>.
+If you don't do this, than choosing replay in the program won't
+work accurately.</p>
