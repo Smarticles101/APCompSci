@@ -8,15 +8,16 @@ import javax.swing.JTextField;
 public class Mahem {
     
     public static void main(String[] args) {
-    	int x =0;
-    	int y=0;
-        while(true) {
+    	
     	SwingUtilities.invokeLater(new Runnable() {
+    		int x =0;
+        	int y=0;
             public void run() {
+            	while(true)
                 createAndShowGUI(x++, y++); 
             }
         });
-        }
+        
     }
 
     private static void createAndShowGUI(int x, int y) {
