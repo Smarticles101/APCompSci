@@ -29,7 +29,7 @@ public class RabbitHunt {
      * are needed or used.
      */
     public static void main(String args[]) {
-        model = new Model(15, 13);
+        model = new Model(22, 22);
         
         message = new MessageView(model);
         view = new View(model);

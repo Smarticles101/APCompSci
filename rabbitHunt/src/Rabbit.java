@@ -51,13 +51,12 @@ public class Rabbit extends Player {
 			Field f3 = Player.class.getDeclaredField("self");
 			f3.setAccessible(true);
 			Entity foxSelf = (Entity)f3.get(fox);
-			//foxSelf.setLocation(m, foxSelf.row, foxSelf.column);
-			fox.step(m);
+			foxSelf.setLocation(m, 1, 1);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		/*
-        // look all around for rabbit
+		
+       /* // look all around for rabbit
         boolean found = false;
         for(int i = 0; !found && i < Direction.NUM_DIRECTIONS; i++) {
             Direction dir = facing.rotate(i);
@@ -102,7 +101,7 @@ public class Rabbit extends Player {
         
         lastDir=facing;
         */
-        return facing;
+        return null;
     }
     
     public boolean foxCanSee(int rabCol, int rabRow, int foxCol, int foxRow) {
