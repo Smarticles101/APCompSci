@@ -17,7 +17,6 @@ public class Mahem {
                 createAndShowGUI(x++, y++); 
             }
         });
-        
     }
 
     private static void createAndShowGUI(int x, int y) {
