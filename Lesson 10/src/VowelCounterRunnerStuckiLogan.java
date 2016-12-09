@@ -5,6 +5,18 @@
 //Class - 6th period
 //Lab  - Vowel Counter
 
+/** Output:
+0bcd1f
+hhhhhhh
+0123456
+c0tp1gd2tr3th4gb5gfr6gm78s9g01s2
+hhhhhhh1234356HHHHDH
+0123456789878780lkjd1slwl2jrl3jfl4wjkflwj
+
+x
+0
+ */
+
 import static java.lang.System.*;
 
 public class VowelCounterRunnerStuckiLogan {

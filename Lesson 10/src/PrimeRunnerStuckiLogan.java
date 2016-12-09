@@ -2,7 +2,7 @@
 //Name - Logan Stucki
 //Date - 1/12/16
 //Class - 6th period
-//Lab  - Prime
+//Lab  - Primeπ
 
 /** Output:
 24 is not prime
