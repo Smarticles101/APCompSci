@@ -1,4 +1,4 @@
-//� A+ Computer Science  -  www.apluscompsci.com
+//A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -22,6 +22,7 @@ public class DigitMath
 	{
 		int sum=0;
 		while(number>0) {
+			sum+=number%10;
 			number/=10;
 		}
 		return sum;
@@ -29,6 +30,6 @@ public class DigitMath
 
 	public static double averageDigits( int number )
 	{
-		return sumDigits(number)/countDigits(number);
+		return (double)sumDigits(number)/(double)countDigits(number);
 	}
 }
