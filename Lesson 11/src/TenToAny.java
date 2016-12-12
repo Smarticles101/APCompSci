@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -8,8 +8,10 @@ import static java.lang.System.*;
 
 public class TenToAny
 {
-   private int base10;
-   private int newBase;
+	private final char[] DIGITS = {'0', '1', '2', '3', '4', '5',
+	'6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	private int base10;
+	private int newBase;
 
 	//add constructors
    	public TenToAny() {
@@ -27,13 +29,17 @@ public class TenToAny
 
 	public String getNewNum()
 	{
+		int tempB10copy = base10;
 		String newNum="";
-		while() {
-			
+		while(tempB10copy>0) {
+			newNum = DIGITS[tempB10copy%newBase] + newNum;
+			tempB10copy/=newBase;
 		}
 		return newNum;
 	}
 
-	//add a toString method	
+	public String toString() {
+		return base10 + " base 10 is " + getNewNum() + " in base " + newBase;
+	}	
 	
 }
