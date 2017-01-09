@@ -24,8 +24,10 @@ public class BiggestString {
 
 	public String getBiggest() {
 		String big = "";
+		int bigInt = 0;
 		for(int i = 0; i<words.length; i++) {
-			if(words[i].length()>big.length()) {
+			if(words[i].compareTo(big)>bigInt) {
+				bigInt = words[i].compareTo("");
 				big = words[i];
 			}
 		}
@@ -33,6 +35,10 @@ public class BiggestString {
 	}
 
 	public String toString() {
-		return "";
+		String joined = "";
+		for(String word:words) {
+			joined+=word+" ";
+		}
+		return joined;
 	}
 }

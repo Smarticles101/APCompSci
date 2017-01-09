@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -  
 //Date -
 //Class -
@@ -20,9 +20,9 @@ public class RPSRunner
 		
 			out.print("type in your prompt [R,P,S] :: ");
 			
-			//read in the player value
+			player = keyboard.next();
 		
-			RockPaperScissors game = new RockPaperScissors();		
+			RockPaperScissors game = new RockPaperScissors(player);
 	}
 }
 
