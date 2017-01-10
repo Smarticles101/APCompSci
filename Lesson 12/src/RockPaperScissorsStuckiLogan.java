@@ -1,23 +1,20 @@
-//� A+ Computer Science  -  www.apluscompsci.com
-//Name -  
-//Date -
-//Class -
-//Lab  -
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 1/6/17
+//Class - 6th period
+//Lab  - Rock Paper Scissors
 
-import java.util.Scanner;
-import static java.lang.System.*;
-
-public class RockPaperScissors
+public class RockPaperScissorsStuckiLogan
 {
 	private String playChoice;
 	private String compChoice;
 
-	public RockPaperScissors()
+	public RockPaperScissorsStuckiLogan()
 	{
 		this("R");
 	}
 
-	public RockPaperScissors(String player)
+	public RockPaperScissorsStuckiLogan(String player)
 	{
 		setPlayers(player);
 	}

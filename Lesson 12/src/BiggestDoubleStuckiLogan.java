@@ -5,16 +5,14 @@
 //Class - 6th period
 //Lab  - Biggest Double
 
-import static java.lang.System.*;
-
-public class BiggestDouble {
+public class BiggestDoubleStuckiLogan {
 	private double one, two, three, four;
 
-	public BiggestDouble() {
+	public BiggestDoubleStuckiLogan() {
 		this(0, 0, 0, 0);
 	}
 
-	public BiggestDouble(double a, double b, double c, double d) {
+	public BiggestDoubleStuckiLogan(double a, double b, double c, double d) {
 		setDoubles(a, b, c, d);
 	}
 
