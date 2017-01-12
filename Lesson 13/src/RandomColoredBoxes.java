@@ -16,42 +16,41 @@ import java.awt.Canvas;
 import javax.swing.JPanel;
 
 public class RandomColoredBoxes extends JPanel {
-	private Timer timer;
-	private final static int SLEEP = 110;
+    private Timer timer;
+    private final static int SLEEP = 110;
 
-	public RandomColoredBoxes() {
-		setBackground(Color.BLACK);
-		setVisible(true);
+    public RandomColoredBoxes() {
+        setBackground(Color.BLACK);
+        setVisible(true);
 
-		ActionListener paintCaller = new ActionListener() {
-			public void actionPerformed(ActionEvent event) {
-				repaint();
-			}
-		};
-		timer = new Timer(SLEEP, paintCaller);
-		timer.start();
-	}
+        ActionListener paintCaller = new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                repaint();
+            }
+        };
+        timer = new Timer(SLEEP, paintCaller);
+        timer.start();
+    }
 
-	public void paintComponent(Graphics window) {
-		super.paintComponent(window);
+    public void paintComponent(Graphics window) {
+        super.paintComponent(window);
 
-		window.setColor(Color.RED);
-		window.setFont(new Font("TAHOMA", Font.BOLD, 12));
-		window.drawString("Graphics Lab Lab11k ", 20, 40);
-		window.drawString("Drawing boxes with nested loops ", 20, 80);
-		System.out.println("WHY");
-		this.drawBoxes(window);
-	}
+        window.setColor(Color.RED);
+        window.setFont(new Font("TAHOMA", Font.BOLD, 12));
+        window.drawString("Graphics Lab Lab11k ", 20, 40);
+        window.drawString("Drawing boxes with nested loops ", 20, 80);
 
-	public void drawBoxes(Graphics window) {
-		// for loop to to across the x - getWidth() might be useful
-		window.setColor(Color.BLUE);
-		for (int x = 0; x < getWidth() / 10; x++) {
-			// for loop to go down the y - getHeight() might be useful
-			for (int y = 0; y < getHeight() / 10; y++) {
-				window.fillRect(x + 1, y + 1, (getWidth() / 10) - 2, (getHeight() / 10) - 2);
-				System.out.println(x + " " + y);
-			}
-		}
-	}
+        this.drawBoxes(window);
+    }
+
+    public void drawBoxes(Graphics window) {
+        // for loop to to across the x - getWidth() might be useful
+        for (int x = 0; x < getWidth(); x+=20) {
+            // for loop to go down the y - getHeight() might be useful
+            for (int y = 0; y < getHeight(); y+=20) {
+                window.setColor(new Color((int)(Math.random() * 255.0), (int)(Math.random() * 255.0), (int)(Math.random() * 255.0)));
+                window.fillRect(x + 4, y + 4,  20 - 8, 20 - 8);
+            }
+        }
+    }
 }
