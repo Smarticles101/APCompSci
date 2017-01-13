@@ -1,21 +1,19 @@
 
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Logan Stucki
+//Date - 13/1/16
+//Class - 6th period
+//Lab  - Triangle Three
 
-import static java.lang.System.*;
-
-public class TriangleThree {
+public class TriangleThreeStuckiLogan {
 	private int size;
 	private String letter;
 
-	public TriangleThree() {
+	public TriangleThreeStuckiLogan() {
 		this(6,"#");
 	}
 
-	public TriangleThree(int count, String let) {
+	public TriangleThreeStuckiLogan(int count, String let) {
 		setTriangle(let, count);
 	}
 

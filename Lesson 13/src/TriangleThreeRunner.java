@@ -1,9 +1,9 @@
 
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class - 
-//Lab  -
+//Name - Logan Stucki
+//Date - 13/1/16
+//Class - 6th period
+//Lab  - Triangle Three
 
 /** Output:
 	  A
@@ -36,8 +36,6 @@
 	WWWW
  */
 
-import static java.lang.System.*;
-
 public class TriangleThreeRunner {
 	public static void main(String args[]) {
 		test(3, "A");
@@ -48,6 +46,6 @@ public class TriangleThreeRunner {
 	}
 
 	public static void test(int size, String c) {
-		System.out.println(new TriangleThree(size, c));
+		System.out.println(new TriangleThreeStuckiLogan(size, c));
 	}
 }
