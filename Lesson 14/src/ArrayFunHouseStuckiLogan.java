@@ -1,13 +1,13 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Logan Stucki
+//Date - 24/1/17
+//Class - 6th period
+//Lab  -  Array fun house
 
 import java.lang.System;
 import java.lang.Math;
 
-public class ArrayFunHouse {
+public class ArrayFunHouseStuckiLogan {
     //instance variables and constructors could be used, but are not really needed
 
     //getSum() will return the sum of the numbers from start to stop, not including stop

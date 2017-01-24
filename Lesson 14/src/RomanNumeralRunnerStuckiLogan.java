@@ -1,16 +1,40 @@
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 24/1/17
+//Class - 6th period
+//Lab  -  Roman Numeral
+
+/** Output:
+ 10 is X
+
+ 100 is C
+
+ 1000 is M
+
+ 2500 is MMD
+
+ 1500 is MD
+
+ 23 is XXIII
+
+ 38 is XXXVIII
+
+ 49 is XLIX
+
+ LXXVII is 77
+
+ XLIX is 49
+
+ XX is 20
+
+ XLIX is 49
+ */
 
 import static java.lang.System.*;
 
-public class RomanNumeralRunner
-{
-	public static void main( String args[] )
-	{
-		RomanNumeral test = new RomanNumeral(10);
+public class RomanNumeralRunnerStuckiLogan {
+	public static void main(String args[]) {
+		RomanNumeralStuckiLogan test = new RomanNumeralStuckiLogan(10);
 		out.println("10 is " + test.toString());
 
 		test.setNumber(100);
@@ -22,7 +46,7 @@ public class RomanNumeralRunner
 		test.setNumber(2500);
 		out.println("2500 is " + test.toString());
 
-		test = new RomanNumeral(1500);
+		test = new RomanNumeralStuckiLogan(1500);
 		out.println("1500 is " + test.toString());
 
 		test.setNumber(23);

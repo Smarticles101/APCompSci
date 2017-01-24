@@ -1,8 +1,8 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class - 
-//Lab  -
+//Name - Logan Stucki
+//Date - 24/1/17
+//Class - 6th period
+//Lab  -  Array fun house two
 
 /** Output:
      Is going up? true
@@ -19,7 +19,7 @@
 
 import java.util.Arrays;
 
-public class ArrayFunHouseTwoRunner {
+public class ArrayFunHouseTwoRunnerStuckiLogan {
     public static void main(String args[]) {
 		int[] one = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int[] two = {1, 2, 3, 9, 11, 20, 30};
@@ -34,17 +34,17 @@ public class ArrayFunHouseTwoRunner {
         d(three);
         d(four);
         Arrays.toString(four);
-        System.out.println("first 7 values greater than 9 "+Arrays.toString(ArrayFunHouseTwo.getCountValuesBiggerThanX(four, 7, 9)));
-        System.out.println("first 5 values greater than 15 "+Arrays.toString(ArrayFunHouseTwo.getCountValuesBiggerThanX(four, 5, 15)));
+        System.out.println("first 7 values greater than 9 "+Arrays.toString(ArrayFunHouseTwoStuckiLogan.getCountValuesBiggerThanX(four, 7, 9)));
+        System.out.println("first 5 values greater than 15 "+Arrays.toString(ArrayFunHouseTwoStuckiLogan.getCountValuesBiggerThanX(four, 5, 15)));
     }
 
     public static void d(int[] n) {
         Arrays.toString(n);
-        System.out.println("Is going down? " + ArrayFunHouseTwo.goingDown(n));
+        System.out.println("Is going down? " + ArrayFunHouseTwoStuckiLogan.goingDown(n));
     }
 
     public static void u(int[] n) {
         Arrays.toString(n);
-        System.out.println("Is going up? " + ArrayFunHouseTwo.goingUp(n));
+        System.out.println("Is going up? " + ArrayFunHouseTwoStuckiLogan.goingUp(n));
     }
 }

@@ -1,13 +1,13 @@
 //� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
+//Name - Logan Stucki
+//Date - 24/1/17
+//Class - 6th period
+//Lab  -  Array fun house two
 
 import java.lang.System;
 import java.lang.Math;
 
-public class ArrayFunHouseTwo
+public class ArrayFunHouseTwoStuckiLogan
 {
 	//goingUp() will return true if all numbers
 	//in numArray are in increasing order
