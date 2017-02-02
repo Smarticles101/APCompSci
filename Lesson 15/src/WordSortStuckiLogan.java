@@ -1,13 +1,19 @@
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Word Sort
+
 import java.util.Arrays;
 
-public class WordSort {
+public class WordSortStuckiLogan {
     String[] words;
 
-    public WordSort() {
+    public WordSortStuckiLogan() {
         this("");
     }
 
-    public WordSort(String... words) {
+    public WordSortStuckiLogan(String... words) {
         this.words = words;
     }
 

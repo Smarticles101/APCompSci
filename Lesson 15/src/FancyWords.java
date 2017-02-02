@@ -1,5 +1,11 @@
-/**
- * Created by stuckil on 1/31/17.
- */
+import java.util.Arrays;
+
 public class FancyWords {
+    char[] lets;
+
+    public FancyWords(char[] lets) {
+        Arrays.sort(lets);
+        this.lets = lets;
+        System.out.println(Arrays.toString(this.lets));
+    }
 }

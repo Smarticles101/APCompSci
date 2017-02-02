@@ -1,8 +1,8 @@
-//� A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Word Sort
 
 /** Output:
 	word 0 :: 12321
@@ -38,7 +38,7 @@
 	word 9 :: sue
  */
 
-public class WordSortRunner  {
+public class WordSortRunnerStuckiLogan {
 	public static void main(String args[]) {
 		t("abc", "ABC", "12321", "fred", "alexander");
 		t("a", "zebra", "friendly", "acrobatics", "435", "TONER", "PRinTeR");
@@ -47,6 +47,6 @@ public class WordSortRunner  {
 	}
 
 	public static void t(String... words) {
-		System.out.println(new WordSort(words));
+		System.out.println(new WordSortStuckiLogan(words));
 	}
 }

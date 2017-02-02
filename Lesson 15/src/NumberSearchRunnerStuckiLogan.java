@@ -1,3 +1,9 @@
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Number Search
+
 /** Output:
     [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1]
     The next largest value after 5 is 6
@@ -9,7 +15,7 @@
     The next largest value after 32767 is 65535
  */
 
-public class NumberSearchRunner {
+public class NumberSearchRunnerStuckiLogan {
     public static void main(String args[]) {
         t(5, 1,2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1);
         t(12, 10, 30, 20, 40, 50, 15);
@@ -18,6 +24,6 @@ public class NumberSearchRunner {
     }
 
     public static void t(int t, int... nums) {
-        System.out.println(new NumberSearch(t, nums));
+        System.out.println(new NumberSearchStuckiLogan(t, nums));
     }
 }

@@ -1,3 +1,9 @@
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Number Shifter
+
 /** Output:
     [2, 5, 8, 4, 8, 1, 6, 1, 7, 10, 1, 1, 10, 8, 10, 2, 8, 7, 6, 3]
     [7, 7, 8, 4, 8, 1, 6, 1, 2, 10, 1, 1, 10, 8, 10, 2, 8, 5, 6, 3]
@@ -9,7 +15,7 @@
     [7, 7, 7, 7, 1, 4, 8, 8, 10, 9, 5, 9, 6, 6, 10, 6, 2, 10, 5, 3]
  */
 
-public class NumberShifterRunner {
+public class NumberShifterRunnerStuckiLogan {
     public static void main(String args[]) {
         t();
         t();
@@ -17,6 +23,6 @@ public class NumberShifterRunner {
     }
 
     public static void t() {
-        System.out.println(new NumberShifter());
+        System.out.println(new NumberShifterStuckiLogan());
     }
 }

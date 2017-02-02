@@ -1,10 +1,16 @@
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Number Search
+
 import java.util.Arrays;
 
-public class NumberSearch {
+public class NumberSearchStuckiLogan {
     int[] nums;
     int target;
 
-    public NumberSearch(int target, int... nums) {
+    public NumberSearchStuckiLogan(int target, int... nums) {
         this.target = target;
         this.nums = nums;
     }

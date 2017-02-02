@@ -1,9 +1,15 @@
+//A+ Computer Science  -  www.apluscompsci.com
+//Name - Logan Stucki
+//Date - 2/2/17
+//Class - 6th
+//Lab - Number Shifter
+
 import java.util.Arrays;
 
-public class NumberShifter {
+public class NumberShifterStuckiLogan {
     int[] nums;
 
-    public NumberShifter() {
+    public NumberShifterStuckiLogan() {
         this.nums = new int[20];
         for(int i = 0; i<this.nums.length; i++) {
             this.nums[i] = (int)Math.ceil(Math.random()*10);
