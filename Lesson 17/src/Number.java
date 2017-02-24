@@ -36,12 +36,14 @@ public class Number
 	public boolean isPerfect()
 	{
 		int total=0;
-		//for(int i = 1; i<)
+		for(int i = 1; i<number; i++) {
+			if(number%i==0) total+=i;
+		}
 		return (number==total);
 	}
 	
 	public String toString( )
 	{
-		return "";
+		return number + "";
 	}
 }

@@ -12,25 +12,27 @@ public class NumberAnalyzer
 
 	public NumberAnalyzer()
 	{
-
+		this("");
 	}
 
 	public NumberAnalyzer(String numbers)
 	{
-
+		setList(numbers);
 	}
 	
 	public void setList(String numbers)
 	{
-
-
-	
+		list = new ArrayList<Number>();
+		for(String n:numbers.split(" ")) {
+			list.add(new Number(Integer.parseInt(n)));
+		}
 	}
 
 	public int countOdds()
 	{
       int oddCount=0;
 
+      for(Number n:list) if(n.isOdd()) oddCount++;
 
 
       return oddCount;
@@ -39,8 +41,7 @@ public class NumberAnalyzer
 	public int countEvens()
 	{
       int evenCount=0;
-
-
+      for(Number n:list) if(!n.isOdd()) evenCount++;
 
       return evenCount;
 	}
@@ -48,14 +49,13 @@ public class NumberAnalyzer
 	public int countPerfects()
 	{
 		int perfectCount=0;
-
-
+		for(Number n:list) if(n.isPerfect()) perfectCount++;
 
       return perfectCount;
 	}
 	
 	public String toString( )
 	{
-		return "";
+		return list.toString();
 	}
 }

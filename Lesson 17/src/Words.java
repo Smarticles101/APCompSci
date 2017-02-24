@@ -17,15 +17,16 @@ public class Words
 
 	public Words(String wordList)
 	{
-
+		setWords(wordList);
 	}
 
 	public void setWords(String wordList)
 	{
+		words = new ArrayList<Word>();
 
-
-
-
+		for(String w:wordList.split(", ")) {
+			words.add(new Word(w));
+		}
 
 	}
 	
@@ -33,9 +34,7 @@ public class Words
 	{
 		int count=0;
 
-
-
-
+		for(Word w:words) if(w.getLength()==size) count++;
 
 		return count;
 	}
@@ -44,11 +43,11 @@ public class Words
 	//this method will also return the sum of the vowels in all words removed
 	public int removeWordsWithXChars(int size)
 	{
-
-
-
-
-
+		for(int i = words.size(); i>=0; i--) {
+			if(words.get(i).getNumVowels() == size) {
+				words.remove(i);
+			}
+		}
 		return 0;
 	}
 
