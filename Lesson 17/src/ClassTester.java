@@ -4,6 +4,21 @@
 //Class -
 //Lab  - 
 
+/** Output:
+ Comp Sci 1
+ Jimmy 100.0 90.0 80.0 60.0
+ Sandy 100.0 100.0 80.0 70.0
+ Fred 50.0 50.0 70.0 68.0
+ Jimmy's average = 82.50
+ Sandy's average = 87.50
+ Fred's average 59.50
+ Sandy's average 87.50
+ Failure List = Fred
+ Highest Average = Sandy
+ Lowest Average = Fred
+ Class Average = 76.50
+ */
+
 import static java.lang.System.*;
 
 public class ClassTester
@@ -25,7 +40,7 @@ public class ClassTester
 		out.println("Failure List = " + test.getFailureList(70));	
 		out.println("Highest Average = " + test.getStudentWithHighestAverage());
 		out.println("Lowest Average = " + test.getStudentWithLowestAverage());
-								
+
 		out.println(String.format("Class Average = %.2f",test.getClassAverage()));									
 	}		
 }

@@ -1,8 +1,22 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
 //Lab  - 
+
+/** Output:
+ 92.5
+ A
+
+ 77.5
+ C
+
+ 47.5
+ F
+
+ 87.5
+ B
+ */
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -13,6 +27,9 @@ public class GradeRunner
 {
    public static void main( String args[] )
    {
-		//add in test cases
+		System.out.println(new Grade(92.5));
+       System.out.println(new Grade(77.5));
+       System.out.println(new Grade(47.5));
+       System.out.println(new Grade(87.5));
 	}
 }

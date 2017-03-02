@@ -48,6 +48,6 @@ public class Word
 
 	public String toString()
 	{
-	   return word+"\n"+"num vowels == "+getNumVowels()+"\nnum chars == "+getLength()+"\n";
+	   return word;
 	}
 }

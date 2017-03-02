@@ -1,4 +1,4 @@
-//� A+ Computer Science  -  www.apluscompsci.com
+//A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -19,20 +19,29 @@ public class MonsterLabRunner
 
 		for(int i=0; i<size;i++)
 		{
-			//read in monster values 
-	
-			//ask for ht
-			
-			//ask for wt
-			
-			//ask for age
-	
-			//instantiate a new Monster() and add it to the herd			
+			int h;
+			int w;
+			int a;
+
+			System.out.print("Enter the ht :: ");
+			h = keyboard.nextInt();
+			System.out.print("Enter the wt :: ");
+			w = keyboard.nextInt();
+			System.out.print("Enter the age :: ");
+			a = keyboard.nextInt();
+
+			System.out.println("\n");
+			herd.add(i, new Monster(h,w,a));
 			
 		}		
 		
-		System.out.println("HERD :: "+herd+"\n");
-		//print out the other stats
+		System.out.println("HERD :: "+herd);
+
+		System.out.println("SMALLEST :: " + herd.getSmallest().toString());
+
+		System.out.println("LARGEST :: " + herd.getLargest().toString());
+
+		System.out.println("HERD :: " + herd);
 			
 	}		
 }
