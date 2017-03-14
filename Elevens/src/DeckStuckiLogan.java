@@ -61,7 +61,13 @@ public class DeckStuckiLogan {
      * and reset the size to represent the entire deck.
      */
     public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+        size = cards.size();
+        for(int i = cards.size()-1; i>=0; i--) {
+            int r = (int)Math.round(Math.random()*i);
+            CardStuckiLogan t = cards.get(i);
+            cards.set(i, cards.get(r));
+            cards.set(r, t);
+        }
     }
 
     /**

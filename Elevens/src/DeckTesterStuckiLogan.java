@@ -25,3 +25,11 @@ public class DeckTesterStuckiLogan {
 		System.out.println(d);
     }
 }
+/* Questions:
+1. Deck uses Card objects to store a large amount of them
+2. 6 cards
+3.  ranks = two, three, four, five, six, seven, eight, nine, ten, jack, queen, king, ace
+    suits = spades, hearts, diamonds, clubs
+    points = 2,3,4,5,6,7,8,9,10,10,10,10,11
+4. no
+ */
