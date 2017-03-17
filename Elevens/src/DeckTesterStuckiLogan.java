@@ -1,3 +1,4 @@
+// Logan Stucki
 
 /* Output:
 size = 4
@@ -7,6 +8,24 @@ rank2 of green (point value == 20), rank1 of green (point value == 12)
 
 Dealt cards:
 rank3 of yellow (point value == 9001), rank2 of yellow (point value == 20)
+
+
+size = 4
+Undealt cards:
+jack of blue (point value == 11), king of red (point value == 13),
+queen of red (point value == 12), jack of red (point value == 11)
+
+Dealt cards:
+king of blue (point value == 13), queen of blue (point value == 12)
+
+
+size = 4
+Undealt cards:
+jack of red (point value == 11), queen of blue (point value == 12),
+jack of blue (point value == 11), king of blue (point value == 13)
+
+Dealt cards:
+queen of red (point value == 12), king of red (point value == 13)
  */
 public class DeckTesterStuckiLogan {
 
@@ -21,8 +40,20 @@ public class DeckTesterStuckiLogan {
         DeckStuckiLogan d = new DeckStuckiLogan(ranks, suits, points);
         d.deal();
         d.deal();
-
 		System.out.println(d);
+        assert 1>2;
+        String[] ranks2 = {"jack", "queen", "king"};
+        String[] suits2 = {"blue", "red"};
+        int[] points2 = {11, 12, 13};
+        d = new DeckStuckiLogan(ranks2, suits2, points2);
+        d.deal();
+        d.deal();
+        System.out.println(d);
+        d.shuffle();
+        d.deal();
+        d.deal();
+        System.out.println(d);
+
     }
 }
 /* Questions:
