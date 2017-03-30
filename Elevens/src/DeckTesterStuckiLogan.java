@@ -41,7 +41,6 @@ public class DeckTesterStuckiLogan {
         d.deal();
         d.deal();
 		System.out.println(d);
-        assert 1>2;
         String[] ranks2 = {"jack", "queen", "king"};
         String[] suits2 = {"blue", "red"};
         int[] points2 = {11, 12, 13};

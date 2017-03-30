@@ -1,5 +1,6 @@
-import java.util.Arrays;
+// Logan Stucki
 
+import java.util.Arrays;
 /* Output:
 Results of 5 consecutive perfect shuffles:
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -42,7 +43,6 @@ public static boolean arePermutations(int[] x, int[] y) {
  * This class provides a convenient way to test shuffling methods.
  */
 public class ShufflerStuckiLogan {
-
     /**
      * The number of consecutive shuffle steps to be performed in each call
      * to each sorting procedure.
