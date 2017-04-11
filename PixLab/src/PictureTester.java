@@ -1,6 +1,3 @@
-// Logan Stucki
-// Activity 5
-
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -11,6 +8,44 @@
  */
 public class PictureTester
 {
+  // Logan Stucki
+  // Activity 6
+  public static void testMirrorArms() {
+    Picture p = new Picture("images/snowman.jpg");
+    p.mirrorArms();
+    p.explore();
+  }
+
+  public static void testMirrorDiagonal() {
+    Picture p = new Picture("images/redMotorcycle.jpg");
+    p.explore();
+    p.mirrorDiagonal();
+    p.explore();
+  }
+
+  public static void testMirrorHorizontalBotToTop() {
+    Picture p = new Picture("images/redMotorcycle.jpg");
+    p.explore();
+    p.mirrorHorizontalBotToTop();
+    p.explore();
+  }
+
+  public static void testMirrorHorizontal() {
+    Picture p = new Picture("images/redMotorcycle.jpg");
+    p.explore();
+    p.mirrorHorizontal();
+    p.explore();
+  }
+
+  public static void testMirrorVerticalRightToLeft() {
+    Picture p = new Picture("images/redMotorcycle.jpg");
+    p.explore();
+    p.mirrorVerticalRightToLeft();
+    p.explore();
+  }
+
+  // Activity 5 below
+
   public static void testGrayscale() {
     Picture beach = new Picture("images/beach.jpg");
     beach.explore();
@@ -89,16 +124,19 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    testKeepOnlyBlue();
+    //testMirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
+    //testMirrorVerticalRightToLeft();
+    //testZeroBlue();
+    //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    testGrayscale();
-    testFixUnderwater();
+    //testNegate();
+    //testGrayscale();
+    //testFixUnderwater();
     //testMirrorVertical();
-    //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorTemple();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
