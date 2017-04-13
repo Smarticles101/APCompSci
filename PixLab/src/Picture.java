@@ -15,6 +15,26 @@ import java.util.List; // resolves problem with java.awt.List and java.util.List
  */
 public class Picture extends SimplePicture 
 {
+
+
+  // Logan Stucki
+  // Activity 7
+
+  public void mirrorGull() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel left = null;
+    Pixel right = null;
+    int width = pixels[0].length;
+    int mp = 340;
+    for(int r = 232; r <= 322; r++) {
+      for(int c = 237; c <= mp; c++) {
+        left = pixels[r][c];
+        right = pixels[r][mp - c + mp];
+        right.setColor(left.getColor());
+      }
+    }
+  }
+
   public void mirrorArms() {
     Pixel[][] pixels = this.getPixels2D();
     Pixel left = null;
@@ -22,10 +42,17 @@ public class Picture extends SimplePicture
     int width = pixels[0].length;
     int mp = 207;
     for(int r = 160; r <= 220; r++) {
-      for(int c = 106; c <= mp; c++) {
+      for(int c = 106; c <= 169; c++) {
         left = pixels[r][c];
-        right = pixels[r][mp - c + mp];
+        right = pixels[r+70][mp - c + mp];
         right.setColor(left.getColor());
+      }
+    }
+    for(int r = 230; r <= 270; r++) {
+      for(int c = 238; c <= 290; c++) {
+        left = pixels[r][mp - c + mp];
+        right = pixels[r-70][c];
+        left.setColor(right.getColor());
       }
     }
   }

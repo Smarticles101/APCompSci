@@ -9,12 +9,23 @@
 public class PictureTester
 {
   // Logan Stucki
-  // Activity 6
+  // Activity 7
+
+  public static void testMirrorGull() {
+    Picture p = new Picture("images/seagull.jpg");
+    p.explore();
+    p.mirrorGull();
+    p.explore();
+  }
+
   public static void testMirrorArms() {
     Picture p = new Picture("images/snowman.jpg");
     p.mirrorArms();
     p.explore();
   }
+
+  // Logan Stucki
+  // Activity 6
 
   public static void testMirrorDiagonal() {
     Picture p = new Picture("images/redMotorcycle.jpg");
@@ -135,7 +146,7 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorTemple();
+    //testMirrorTemple();
     testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
