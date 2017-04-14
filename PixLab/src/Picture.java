@@ -36,23 +36,26 @@ public class Picture extends SimplePicture
   }
 
   public void mirrorArms() {
+    int mirrorPoint = 193;
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
     Pixel[][] pixels = this.getPixels2D();
-    Pixel left = null;
-    Pixel right = null;
-    int width = pixels[0].length;
-    int mp = 207;
-    for(int r = 160; r <= 220; r++) {
-      for(int c = 106; c <= 169; c++) {
-        left = pixels[r][c];
-        right = pixels[r+70][mp - c + mp];
-        right.setColor(left.getColor());
+
+    for (int row = 158; row < mirrorPoint; row++) {
+      for (int col = 104; col < 170; col++) {
+        topPixel = pixels[row][col];      
+        bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+        bottomPixel.setColor(topPixel.getColor());
       }
-    }
-    for(int r = 230; r <= 270; r++) {
-      for(int c = 238; c <= 290; c++) {
-        left = pixels[r][mp - c + mp];
-        right = pixels[r-70][c];
-        left.setColor(right.getColor());
+    }    
+    int mirrorPoint2 = 192;
+    Pixel topPixel2 = null;
+    Pixel bottomPixel2 = null;
+    for (int row = 171; row < mirrorPoint2; row++) {
+      for (int col = 239; col < 290; col++) {
+        topPixel2 = pixels[row][col];      
+        bottomPixel2 = pixels[mirrorPoint2 - row + mirrorPoint2][col];
+        bottomPixel2.setColor(topPixel2.getColor());
       }
     }
   }
