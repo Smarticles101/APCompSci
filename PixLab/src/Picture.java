@@ -15,7 +15,53 @@ import java.util.List; // resolves problem with java.awt.List and java.util.List
  */
 public class Picture extends SimplePicture 
 {
+  // Logan Stucki
+  // Activity 8
 
+  public void myCollage() {
+    Picture flower1 = new Picture("images/flower1.jpg");
+    Picture flower2 = new Picture("images/flower2.jpg");
+    Picture koala = new Picture("images/koala.jpg");
+    this.copy(flower1,0,0);
+    this.copy(flower2,100,0);
+    this.copy(koala,200,0);
+    Picture flowerNoBlue = new Picture(flower2);
+    flowerNoBlue.zeroBlue();
+    Picture f1 = new Picture(flower1);
+    f1.negate();
+    Picture f2 = new Picture(flower2);
+    f2.mirrorDiagonal();
+    Picture koalaGreyscale = new Picture(koala);
+    koalaGreyscale.grayscale();
+    this.copy(flowerNoBlue,300,100);
+    this.copy(f1,100,100);
+    this.copy(f2,200,100);
+    this.copy(koalaGreyscale, 100, 200);
+    //this.mirrorHorizontal();
+    this.write("images/collage.jpg");
+  }
+
+  public void copy(Picture fromPic, int startRow, int startCol, int startFromRow, int startFromCol, int endFromRow, int endFromCol) {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = startFromRow, toRow = startRow;
+         fromRow < fromPixels.length && fromRow < endFromRow &&
+                 toRow < toPixels.length;
+         fromRow++, toRow++)
+    {
+      for (int fromCol = startFromCol, toCol = startCol;
+           fromCol < fromPixels[0].length && fromCol < endFromCol &&
+                   toCol < toPixels[0].length;
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }
+  }
 
   // Logan Stucki
   // Activity 7
@@ -36,26 +82,24 @@ public class Picture extends SimplePicture
   }
 
   public void mirrorArms() {
-    int mirrorPoint = 193;
+    int mp = 193;
     Pixel topPixel = null;
     Pixel bottomPixel = null;
     Pixel[][] pixels = this.getPixels2D();
 
-    for (int row = 158; row < mirrorPoint; row++) {
+    for (int row = 158; row < mp; row++) {
       for (int col = 104; col < 170; col++) {
         topPixel = pixels[row][col];      
-        bottomPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+        bottomPixel = pixels[mp - row + mp][col];
         bottomPixel.setColor(topPixel.getColor());
       }
     }    
-    int mirrorPoint2 = 192;
-    Pixel topPixel2 = null;
-    Pixel bottomPixel2 = null;
-    for (int row = 171; row < mirrorPoint2; row++) {
+    mp = 192;
+    for (int row = 171; row < mp; row++) {
       for (int col = 239; col < 290; col++) {
-        topPixel2 = pixels[row][col];      
-        bottomPixel2 = pixels[mirrorPoint2 - row + mirrorPoint2][col];
-        bottomPixel2.setColor(topPixel2.getColor());
+        topPixel = pixels[row][col];
+        bottomPixel = pixels[mp - row + mp][col];
+        bottomPixel.setColor(topPixel.getColor());
       }
     }
   }
@@ -360,6 +404,10 @@ public class Picture extends SimplePicture
   /** Method to show large changes in color 
     * @param edgeDist the distance for finding edges
     */
+
+  // Logan Stucki
+  // Activity 9
+
   public void edgeDetection(int edgeDist)
   {
     Pixel leftPixel = null;
@@ -376,6 +424,22 @@ public class Picture extends SimplePicture
         rightColor = rightPixel.getColor();
         if (leftPixel.colorDistance(rightColor) > 
             edgeDist)
+          leftPixel.setColor(Color.BLACK);
+        else
+          leftPixel.setColor(Color.WHITE);
+      }
+    }
+
+    for (int row = 0; row < pixels.length-1; row++)
+    {
+      for (int col = 0;
+           col < pixels[0].length; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row+1][col];
+        rightColor = rightPixel.getColor();
+        if (leftPixel.colorDistance(rightColor) >
+                edgeDist)
           leftPixel.setColor(Color.BLACK);
         else
           leftPixel.setColor(Color.WHITE);

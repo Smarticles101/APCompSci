@@ -9,6 +9,24 @@
 public class PictureTester
 {
   // Logan Stucki
+  // Activity 8
+
+  public static void testMyCollage() {
+    Picture p = new Picture("images/kitten2.jpg");
+    p.explore();
+    p.myCollage();
+    p.explore();
+  }
+
+  public static void testNewCopy() {
+    Picture p = new Picture("images/flower1.jpg");
+    Picture p2 = new Picture("images/flower2.jpg");
+    p.explore();
+    p.copy(p2, 10, 10, 10, 10, 60, 50);
+    p.explore();
+  }
+
+  // Logan Stucki
   // Activity 7
 
   public static void testMirrorGull() {
@@ -135,6 +153,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    //testMyCollage();
     //testMirrorHorizontal();
     //testMirrorHorizontalBotToTop();
     //testMirrorVerticalRightToLeft();
@@ -147,12 +166,12 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
-    testMirrorArms();
+    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
